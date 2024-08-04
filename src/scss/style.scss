@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// -----------------
+body {
+  overflow-x: hidden;
+}
+
+// Header
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../assets/images/header-background.jpg) center center no-repeat;
+  background-size: cover;
+
+  .navbar {
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+// nav links under the logo effect
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-left: calc(5.5%);
+  }
+}
+
+// handling Scrolling & navbar position
+#register-form,
+#discover-1,
+#summary,
+#takeaways,
+#subscribe {
+  scroll-margin-top: 150px !important;
+}
+
+// Invitation
+.invitation {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../assets/images/invitation-background.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+// Takeaways
+.fa-stack-2x {
+  color: darken(#fbf9f5, 2%);
+}
+
+// Footer
+.footer-socials {
+  i:hover {
+    color: var(--bs-primary) !important;
+  }
+}
+
+// Media Queries ----------------------
+// Under sm breakpoint
+@media (max-width: 569px) {
+  #register-form,
+  #discover-1,
+  #summary,
+  #takeaways,
+  #subscribe {
+    scroll-margin-top: 90px !important;
+  }
+}
+// Under md breakpoint
+@media (max-width: 767px) {
+  .hero-content .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  .invitation .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+// Carousel ---------------
+@media (max-width: 645px) {
+  .carousel img {
+    height: 280px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel img {
+    height: 350px;
+  }
+}
+
+// Takeaways -------------
+@media (min-width: 571px) and (max-width: 680px) {
+  .takeaways {
+    .wrapper {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (min-width: 681px) and (max-width: 767px) {
+  .takeaways {
+    .wrapper {
+      width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// Mobile Landscape Mode ----------
+@media (orientation: landscape) and (max-height: 600px) {
+  .container-lg,
+  .container-xl {
+    width: 85%;
+  }
+  #invitation .container-lg {
+    width: 100%;
+  }
+
+  .hero-content .pt-7 {
+    padding-top: 4rem !important;
+  }
+
+  // handling Scrolling & navbar position
+  #discover-1,
+  #summary,
+  #takeaways,
+  #subscribe {
+    scroll-margin-top: 0 !important;
+  }
+}

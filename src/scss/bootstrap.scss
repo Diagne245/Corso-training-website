@@ -1,0 +1,260 @@
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+// Colors
+$primary: #f8b547;
+$secondary: #35353a;
+$light: #fbf9f5;
+$body-bg: $light;
+
+// Links
+$link-hover-color: $primary !default;
+
+// Buttons padding
+$btn-padding-y: 0.8rem;
+$btn-padding-y-sm: 0.8rem;
+$btn-padding-y-lg: 0.8rem;
+$btn-padding-y-xl: 0.8rem;
+
+$btn-padding-x: 1.5rem;
+$btn-padding-x-sm: 1.5rem;
+$btn-padding-x-lg: 1.5rem;
+$btn-padding-x-xl: 1.5rem;
+
+// Navbar
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: $primary;
+$navbar-padding-y: .8rem;
+$navbar-toggler-border-radius: 10px !default;
+
+// Spacers
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 12,
+) !default;
+
+// Gutters
+$grid-gutter-width: 1.5rem;
+$gutters: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 12,
+);
+// Negative Margin
+$enable-negative-margins: true;
+
+// Add values to predefined classes
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/variables-dark';
+@import '/node_modules/bootstrap/scss/maps';
+@import '/node_modules/bootstrap/scss/mixins';
+@import '/node_modules/bootstrap/scss/utilities';
+@import '/node_modules/bootstrap/scss/modal';
+
+// Scale Modals
+@include media-breakpoint-up(sm) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    min-width: 90%;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+$modal-2xl: 1400px !default;
+// Modals Size
+@include media-breakpoint-up(2xl) {
+  .modal-2xl {
+    --#{$prefix}modal-width: #{$modal-2xl};
+  }
+}
+
+// Rounded class
+$border-radius-3xl: 3rem !default;
+$border-radius-4xl: 4rem !default;
+$border-radius-5xl: 5rem !default;
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'rounded':
+      map-merge(
+        map-get($utilities, 'rounded'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'rounded'), 'values'),
+              (
+                6: $border-radius-3xl,
+                7: $border-radius-4xl,
+                8: $border-radius-5xl,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+// Width class
+$utilities: map-merge(
+  $utilities,
+  (
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'width'), 'values'),
+              (
+                5: 5%,
+                10: 10%,
+                15: 15%,
+                20: 20%,
+                30: 30%,
+                35: 35%,
+                40: 40%,
+                45: 45%,
+                55: 55%,
+                60: 60%,
+                65: 65%,
+                70: 70%,
+                80: 80%,
+                85: 85%,
+                90: 90%,
+                95: 95%,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+// Enable Responsive classes
+$utilities: map-merge(
+  $utilities,
+  (
+    'width':
+      map-merge(
+        map-get($utilities, 'width'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// Height class
+$utilities: map-merge(
+  $utilities,
+  (
+    'height':
+      map-merge(
+        map-get($utilities, 'height'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'height'), 'values'),
+              (
+                5: 5%,
+                10: 10%,
+                15: 15%,
+                20: 20%,
+                30: 30%,
+                35: 35%,
+                40: 40%,
+                45: 45%,
+                55: 55%,
+                60: 60%,
+                65: 65%,
+                70: 70%,
+                80: 80%,
+                85: 85%,
+                90: 90%,
+                95: 95%,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'height':
+      map-merge(
+        map-get($utilities, 'height'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+// Opacity
+$utilities: map-merge(
+  $utilities,
+  (
+    'opacity':
+      map-merge(
+        map-get($utilities, 'opacity'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'opacity'), 'values'),
+              (
+                0: 0,
+                5: 0.5,
+                10: 0.1,
+                15: 0.15,
+                20: 0.2,
+                30: 0.3,
+                35: 0.35,
+                40: 0.4,
+                45: 0.45,
+                60: 0.6,
+                65: 0.65,
+                70: 0.7,
+                80: 0.8,
+                85: 0.85,
+                90: 0.9,
+                95: 0.95,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'opacity':
+      map-merge(
+        map-get($utilities, 'opacity'),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
