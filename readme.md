@@ -1,6 +1,6 @@
 # Corso Website
 
-Demo Link: &ensp; **https://corso-training.onrender.com**
+Demo Link: &ensp; **https://corso-training-webapp.netlify.app/**
 
 Bootstrap website for training courses, workshops, seminars from the [Bootstrap 5 From Scratch ](https://www.udemy.com/course/bootstrap-from-scratch/?kw=bootstrap&src=sac&couponCode=LETSLEARNNOW) `Traversy Media` Udemy Course.
 
